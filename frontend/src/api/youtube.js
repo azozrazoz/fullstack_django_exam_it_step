@@ -1,9 +1,8 @@
 import axios from "axios";
 
-const endPoint = process.env.DJANGO_APP_API_URL || "asdf";
+const endPoint = process.env.REACT_APP_API_URL || "asdf";
 
 export const getYoutubeTestData = (setDetails) => {
-    console.log(endPoint);
   axios
     .get(`${endPoint}/youtube_test`)
     .then((res) => {
@@ -11,5 +10,16 @@ export const getYoutubeTestData = (setDetails) => {
     })
     .catch((err) => {
       console.log(err);
+    });
+};
+
+export const postYoutubeTestData = (youtube_test_data) => {
+  axios
+    .post("/youtube_test", youtube_test_data)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
     });
 };
