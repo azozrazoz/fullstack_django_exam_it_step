@@ -4,8 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from "./pages/HomePage";
 import LessonPage from "./pages/LessonPage";
 import ProfilePage from "./pages/ProfilePage";
-
-import YoutubeTest from './components/YoutubeTest'
+import YoutubePage from './pages/YoutubePage'
 
 function Router() {
     return (
@@ -14,7 +13,7 @@ function Router() {
                 <Route path="/" element={<HomePage />}/>
                 <Route path="/lesson" element={<LessonPage />}/>
                 <Route path="/profile" element={<ProfilePage />}/>
-                <Route path="/youtube_test" element={<YoutubeTest />}/>
+                <Route path="/youtube" element={<YoutubePage />}/>
             </Routes>
         </BrowserRouter>
     )

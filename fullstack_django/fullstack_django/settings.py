@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-l+azb0jhger7@0!%7(1owdj!(nk4^2a+m61cq^wghyv!@1--xq'
-
+JWT_SECRET = "ahahahahaha"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'backend_api',
     'rest_framework',
+    'user',
     'corsheaders',
 
 ]
@@ -142,3 +143,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = "user.User"
+
+CORS_ALLOW_CREDENTIALS = True
