@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { getStudent_data } from '../../api/student'
 
 function Students() {
   const [details, setDetails] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/students")
-      .then((res) => {
-        setDetails(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    getStudent_data(setDetails);
   }, []);
 
   return (
@@ -22,8 +15,8 @@ function Students() {
       {details.map((output, id) => (
         <div key={id}>
           <div>
-            <h2>{output.first_name}</h2>
-            <p>{output.last_name}</p>
+            <h2>{output.name}</h2>
+            <p>{output.email}</p>
           </div>
         </div>
       ))}

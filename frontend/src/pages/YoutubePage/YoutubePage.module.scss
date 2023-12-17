@@ -1,0 +1,23 @@
+.form {
+    display: block;
+    margin: 10px;
+    width: 10rem;
+    height: 20rem;
+}
+
+.form input {
+    width: 100%;
+    display: block;
+    margin: 1rem 0rem;
+    font-size: 1rem;
+}
+
+.form button {
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(13, 97, 181);
+}

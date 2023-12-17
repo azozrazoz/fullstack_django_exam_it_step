@@ -1,5 +1,5 @@
 """
-URL configuration for backend project.
+URL configuration for catec_portal project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,8 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from backend.views import *
+from authapp.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('youtube_test/', YouTubeVideoView.as_view(), name='oh shit'),
+    path('users/', UserView.as_view(), name='oh shit users'),
+    path('lessons/', LessonsView.as_view(), name='oh shit lessons'),
+    path('achievements/', AchievementsView.as_view(), name='oh shit lessons'),
 ]

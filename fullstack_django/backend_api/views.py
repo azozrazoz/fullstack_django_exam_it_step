@@ -4,8 +4,6 @@ from .models import YouTubeVideo
 from rest_framework.response import Response
 from .serializer import *
 
-# Create your views here.
-
 class YouTubeVideoView(APIView):
     def get(self, request):
         output = [ 

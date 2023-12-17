@@ -10,13 +10,12 @@ function YoutubeTest() {
 
   return (
     <div>
-        <header>{process.env.DJANGO_APP_API_URL}</header>
         <hr></hr>
         {details.map((output, id) => (
         <div key={id}>
             <div>
-            <h2>Title: {output.title}</h2>
-            <p>Channel: {output.channel}</p>
+              <h2>Title: {output.title}</h2>
+              <p>Channel: {output.channel}</p>
             </div>
         </div>
         ))}

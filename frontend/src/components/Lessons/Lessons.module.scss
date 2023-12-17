@@ -1,0 +1,24 @@
+.Lessons {
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+}
+
+table tr th {  
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+table tr td {
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
+    background-color: cornflowerblue;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+}

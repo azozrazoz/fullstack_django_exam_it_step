@@ -11,8 +11,8 @@ function Navbar() {
         {process.env.REACT_APP_LOGO_NAME}
       </Link>
       <nav>
-        <Link className={s.h2} to="/youtube">
-          Youtube
+        <Link className={s.h2} to="/lessons">
+          Lessons
         </Link>
         <Link className={s.h2} to="/students">
           Students

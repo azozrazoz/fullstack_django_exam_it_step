@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from "react";
-import axios from 'axios';
+import React, { useEffect, useState } from "react";=
+
+import { getAchievements_data } from "../../api/achievements";
 
 function Achievements() {
   const [details, setDetails] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/achievements")
-      .then((res) => {
-        setDetails(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    getAchievements_data(setDetails)
   }, []);
 
   return (
